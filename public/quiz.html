@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Quiz</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="biologia.html">Biologia Marinha</a>
+            <a href="dinossauros.html">Dinossauros</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+
+    <main id="quiz">
+
+        <section id="tela-escolha">
+            <h2>Teste seus conhecimentos</h2>
+            <p>Escolha uma área. Cada rodada tem 10 perguntas sorteadas.</p>
+
+            <div class="quiz-escolha">
+                <button type="button" class="quiz-area" data-area="biologia">
+                    <h3>🌊 Biologia Marinha</h3>
+                    <p>Perguntas sobre os animais dos oceanos.</p>
+                    <span class="quiz-recorde" id="recorde-biologia"></span>
+                </button>
+
+                <button type="button" class="quiz-area quiz-area-dino" data-area="dinossauros">
+                    <h3>🦖 Dinossauros</h3>
+                    <p>Perguntas sobre os gigantes do passado.</p>
+                    <span class="quiz-recorde" id="recorde-dinossauros"></span>
+                </button>
+            </div>
+        </section>
+
+        <section id="tela-pergunta" class="quiz-caixa" hidden>
+            <div class="quiz-topo">
+                <span id="quiz-progresso"></span>
+                <span id="quiz-pontos"></span>
+            </div>
+            <div class="quiz-barra"><div id="quiz-barra-cheia"></div></div>
+
+            <h2 id="quiz-enunciado"></h2>
+
+            <div id="quiz-opcoes" class="quiz-opcoes"></div>
+
+            <p id="quiz-explicacao" class="quiz-explicacao" hidden></p>
+
+            <button type="button" id="quiz-proxima" class="quiz-botao" hidden>Próxima pergunta →</button>
+        </section>
+
+        <section id="tela-final" class="quiz-caixa" hidden>
+            <h2>Resultado</h2>
+            <p id="quiz-placar" class="quiz-placar"></p>
+            <p id="quiz-mensagem"></p>
+            <p id="quiz-recorde-final" class="quiz-recorde"></p>
+
+            <div class="quiz-acoes">
+                <button type="button" id="quiz-repetir" class="quiz-botao">Jogar de novo</button>
+                <button type="button" id="quiz-trocar" class="quiz-botao quiz-botao-sec">Trocar de área</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>
